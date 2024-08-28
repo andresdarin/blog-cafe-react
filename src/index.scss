@@ -1,0 +1,234 @@
+// Variables
+$color1: #F0DAAE;
+$color2: #A3966A;
+$color3: #895d2b;
+$color4: #90553c;
+$color5: #482e1d;
+$colorEditar: #1cddda;
+$colorEliminar: #ff4744;
+$colorBlanco: #ffffff;
+
+
+$font-family: "League Spartan", sans-serif, Arial, Helvetica;
+
+body {
+  font-family: $font-family;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+// Header
+.header {
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+
+// Nav
+.nav {
+  position: absolute;
+  /* Puedes cambiar esto a 'relative' si lo prefieres */
+  top: 0;
+  /* Ajusta según sea necesario */
+  left: 50%;
+  /* Centra horizontalmente */
+  transform: translateX(-50%);
+  /* Ajusta para centrar exactamente */
+  z-index: 2;
+  width: 100%;
+  /* Asegura que ocupe todo el ancho del contenedor */
+  padding: 1rem;
+  font-size: 20px;
+  color: $colorBlanco;
+
+  >ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    /* Elimina los puntos de la lista */
+    padding: 0;
+    /* Asegura que no haya padding extra */
+    margin: 0;
+    /* Elimina el margen por defecto */
+    color: $colorBlanco;
+    /* Aplica el color de la variable a los elementos de la lista */
+    text-transform: uppercase;
+    font-weight: bold;
+
+    li {
+      margin: 0 20px;
+      /* Espaciado entre los elementos de la lista */
+
+      a {
+        text-decoration: none;
+        /* Elimina el subrayado en los enlaces */
+        color: inherit;
+        /* Hereda el color del elemento padre */
+        display: inline-block;
+        /* Asegura que el margen funcione como se espera */
+
+      }
+
+      &:hover {
+        color: orangered; // Cambia el color en hover
+        transition: color 0.7s ease; // Transición suave
+      }
+    }
+  }
+}
+
+
+// Landing Page
+.landing-page {
+  font-family: Arial, sans-serif;
+}
+
+.banner {
+  height: 50vh;
+  background-image: url('/src/assets/Background-header.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative; // Contenedor principal
+
+  // Imagen superpuesta
+  .overlay-image {
+    position: absolute;
+    top: 50%; // Centrado verticalmente
+    left: 50%; // Centrado horizontalmente
+    transform: translate(-55%, -50%); // Ajusta para centrado exacto
+    z-index: 1;
+    width: 520px; // Ajusta el tamaño según sea necesario
+    height: auto; // Mantén la relación de aspecto
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    img {
+      width: 100%; // Ajusta la imagen al tamaño del contenedor
+      height: auto; // Mantén la relación de aspecto
+      object-fit: contain; // Asegura que la imagen se ajuste al contenedor sin recortes
+    }
+  }
+}
+
+
+
+
+// Sections
+.section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.25rem;
+    max-width: 800px;
+  }
+}
+
+// Section backgrounds
+.section1 {
+  display: flex;
+  align-items: center; // Centra verticalmente
+  justify-content: space-between; // Espacia el contenido a los lados
+  height: 100vh; // Ajusta según sea necesario
+  padding: 20px; // Ajusta según sea necesario
+
+  .image-container {
+    position: relative;
+    width: 50%; // Ajusta el ancho según sea necesario
+    height: 100%; // Ajusta el alto según sea necesario
+
+    .background-image {
+      background-image: url('src/assets/LP1.png'); // Ruta a la imagen de fondo
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .overlay-image {
+      position: absolute;
+      top: 50%; // Centra verticalmente
+      left: 50%; // Centra horizontalmente
+      transform: translate(-50%, -50%); // Ajusta para centrado exacto
+      z-index: 2;
+      width: 50%; // Ajusta el tamaño según sea necesario
+      height: auto; // Mantén la relación de aspecto
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%; // Ajusta la imagen al tamaño del contenedor
+        height: auto; // Mantén la relación de aspecto
+        object-fit: contain; // Asegura que la imagen se ajuste al contenedor sin recortes
+      }
+    }
+  }
+
+  .text-container {
+    width: 50%; // Ajusta el ancho según sea necesario
+    padding: 20px; // Ajusta el padding según sea necesario
+    color: #333; // Color del texto
+
+    h2 {
+      font-size: 1.5rem; // Ajusta el tamaño del subtítulo
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 2.5rem; // Ajusta el tamaño del título
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1rem; // Ajusta el tamaño del párrafo
+      line-height: 1.6; // Ajusta la altura de línea para mejorar la legibilidad
+    }
+  }
+}
+
+
+.section2 {
+  background-color: #e0e0e0;
+}
+
+.section3 {
+  background-color: #cccccc;
+}
+
+.section4 {
+  background-color: #b3b3b3;
+}
+
+.section5 {
+  background-color: #999999;
+}
